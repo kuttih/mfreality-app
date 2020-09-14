@@ -1,0 +1,286 @@
+<div class="spinner-status" *ngIf="uploader">
+	<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+<!-- Page Content -->
+<div class="container tm-30">
+
+	<div class="row">
+		<!-- Back -->
+		<div class="col-lg-12 col-md-12">
+			<div class="d-flex" style="margin: 10px 0px">
+				<div>
+					<img src="../../../../../assets/img/scene/back-icon.png" class="">
+				</div>
+
+				<div>
+					<a class="back" routerLink="/uploadimage"> Back to Workbench </a>
+				</div>
+			</div>
+		</div>
+		<!-- Buttons -->
+		<div class="col-lg-12 col-md-12" style="margin: 10px 10px">
+			<div class="row">
+				<div class=" col-md-4">
+					<h1 class="subtitle"> My First Scene </h1>
+				</div>
+
+				<div class="col-md-8">
+					<div class="row" style="margin-top: 10px">
+
+						<div class="col-md-2"></div>
+						<div class="col-md-2" style="height: 50px">
+							<a class="white-btn">
+								Cancel
+							</a>
+						</div>
+
+						<div class="col-md-2" style="height: 50px">
+							<a class="white-btn">
+								Clone
+							</a>
+						</div>
+
+						<div class="col-md-2" style="height: 50px">
+							<a class="white-btn"> Preview </a>
+						</div>
+
+						<div class="col-md-2" style="height: 50px">
+							<a routerLink="/overlays" class="white-btn" style="color: #000"> Next </a>
+
+						</div>
+
+						<div class="col-md-2" style="height: 50px">
+							<a routerLink="/uploadimage" class="white-btn" style="color: #000"> Back </a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- Options -->
+		<div class="col-lg-2 col-md-2">
+			<div class="left-box text-center">
+				<div class="sel-box">
+					<div class="icon-img">
+						<i class="fas fa-unlock-alt"></i>
+					</div>
+					<a> Add Lock view </a>
+				</div>
+
+				<div class="sel-box">
+					<div class="icon-img text-center mb-pd">
+						<div class="rectangle"> </div>
+					</div>
+					<a> Preview </a>
+				</div>
+				<div class="sel-box">
+					<div class="icon-img">
+						<i class="fas fa-cube" style="font-size: 24px"></i>
+					</div>
+					<a> 3-d view </a>
+				</div>
+				<div class="sel-box">
+					<div class="icon-img">
+						<i class="fas fa-reply-all"></i>
+					</div>
+					<a> Undo changes </a>
+				</div>
+				<div class="sel-box">
+					<div class="icon-img">
+						<i class="fas fa-reply"></i>
+					</div>
+					<a> Reset </a>
+				</div>
+
+				<div class="d-flex">
+					<div style="width: 40%">
+						<div class="icon-img">
+							<i class="fas fa-search-plus"></i>
+						</div>
+						<a style="font-size: 12px"> Zoom In </a>
+					</div>
+
+					<div style="width: 20%">
+						<a> Text </a>
+						<a> Text </a>
+					</div>
+
+					<div style="width: 40%">
+						<div class="icon-img">
+							<i class="fas fa-search-minus"></i>
+						</div>
+						<a style="font-size: 12px"> Zoom Out </a>
+					</div>
+
+				</div>
+				<br />
+			</div>
+		</div>
+		<!-- Center -->
+		<div class="col-md-7 mr-20">
+			<div class="success">
+
+
+				<a> Uploaded Trigger image Successfully <h4 *ngIf="message">{{message}}</h4></a>
+			</div>
+			<div class="img">
+				<!-- <img src="img/Image20.png" style="object-fit: contain;     width: 100%;"/> -->
+
+				<div *ngIf="retrievedImage">
+					<img [src]="retrievedImage" id="lastUploadedImage" style="object-fit: contain;  width: 100%;">
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-3 mr-20 text-right">
+			<div class="overlay-box text-center">
+				<div class="w-plus"> + </div>
+				<a class="w-text" data-toggle="modal" data-target="#exampleModal"> Add Overlay </a>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+<!-- Video Upload Modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+	aria-hidden="true">
+
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="row">
+
+					<div class="col-md-12 mr-20">
+						<h1 class="re-title"> Upload Overlay </h1>
+					</div>
+
+					<form  (submit)="uploadFileToCoundinary()"style="width: 100%;">
+					<div class="col-md-12">
+						<div class="row form-group">
+							<div class="col-md-2" style="padding-top: 10px;">
+								<label class="label"> Name </label>
+							</div>
+							<div class="col-md-10">
+								<input class="input1 form-control" [(ngModel)]="videoName" name="videoName">
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-12 form-group">
+						<div class="row">
+							<div class="col-md-2" style="padding-top: 10px;">
+								<label class="label"> Folder </label>
+							</div>
+							<div class="col-md-10">
+								<h2 class="trigger form-group"> Video </h2>
+								<div class="add-new1">
+									<a> Add New </a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-12 form-group">
+						<div class="row">
+							<div class="col-md-2" style="padding-top: 10px;">
+								<label class="label" for="overlays"> Type </label>
+							</div>
+							<div class="col-md-10 form-group">
+								<select id="overlays" name="country" class="form-control" style="height: 50px;">
+									<option value="video">Video</option>
+									<option value="2d">2D Image</option>
+									<option value="3d">3D Model</option>
+									<option value="gif">GIF</option>
+								</select>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="col-md-12 mr-20 form-group" style=" margin-top: 30px">
+						<div class="row">
+							<div class="col-md-3 ml-50" style="margin-left: 0">
+								<label class="label"> Overlay videos </label>
+							</div>
+							<div class="col-md-3 ml-50">
+								<a class="btn btn-primary form-group"> From File </a>
+							</div>
+							<div class="col-md-3 ml-50">
+								<a class="btn btn-primary form-group"> From DropBox </a>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="col-md-12 mr-20 form-group">
+						<div class="row">
+							<div class="col-md-2">
+
+							</div>
+							<div class="col-md-8">
+								<input class="img-input form-control" placeholder="100mb Max">
+							</div>
+							<div class="col-md-2">
+								<a class="btn btn-primary form-control"> Browser </a>
+
+							</div>
+
+
+						</div>
+					</div>
+
+					<div class="col-md-12 mr-20" class="form-group">
+						<div class="row">
+							<div class="col-md-2">
+								<input type="file" id="file" (change)="handleVideoFileInput($event.target.files)"
+								 style="margin-left: 118px;">
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-12 form-group">	
+						<div class="row">
+							<div class="col-md-12">
+								<label class="label" for="desc"> Description </label>
+
+							</div>
+							<div class="col-md-12 ">
+								<Textarea id="desc" class="text-area form-control" [(ngModel)]="description" name="description" > </Textarea>
+							</div>
+							
+
+						</div>
+					</div>
+
+					<div class="col-md-12 ">
+						<div class="custom-control custom-checkbox mr-sm-2">
+							<input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+							<label class="custom-control-label" for="customControlAutosizing">Loop overlay</label>
+						</div>
+					</div>
+
+
+
+					<div class="col-md-12 col-lg-12  text-right">
+
+						<button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close"
+							style="width: 120px">
+							CLOSE
+						</button>
+						<!-- <a href="addscene2.4.html"  class="btn btn-primary" style="width: 120px; margin-left: 10px">
+                
+             		 Upload
+                  </a> -->
+						<input type="button" (click)="uploadFileToCoundinary()" value="upload" class="btn btn-primary" style="width: 120px; margin-left: 10px">
+
+					</div>
+				</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

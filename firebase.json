@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "artwork",
+      "public": "dist/artwork",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

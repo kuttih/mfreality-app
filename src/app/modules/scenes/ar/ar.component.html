@@ -1,0 +1,26 @@
+<a-scene markers_loading vr-mode-ui="enabled: false" 
+embedded
+id="scene"
+renderer='antialias: true; alpha: true; precision: mediump;'
+embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'
+   gesture-detector>
+  <!-- <a-assets>
+	<video class="videos" id="vid" src="assets/{{assetsUrl}}" preload="auto" response-type="arraybuffer" loop
+	  crossorigin webkit-playsinline playsinline autoplay crossorigin="anonymous"></video>
+  </a-assets>
+
+  <a-marker type="pattern" preset="custom" url="assets/marker.patt" videohandler smooth="true" smoothCount="10"
+	smoothTolerance="0.01" smoothThreshold="5" raycaster="objects: .clickable" emitevents="true"
+	cursor="fuse: false; rayOrigin: mouse;" id="markerA">
+	<a-video src="#vid" scale="1 1 1" position="0 0.1 0" rotation="90 180 0" class="clickable" gesture-handler>
+	</a-video>
+  </a-marker> -->
+
+  <a-entity camera>
+	<a-cursor> </a-cursor>
+  </a-entity>
+</a-scene>
+
+<!-- Based on the Aframe_MultiMakers Solution -->
+
+

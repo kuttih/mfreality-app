@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "mfw-dashboard": {
+      "hosting": {
+        "artwork": [
+          "mfw-dashboard"
+        ]
+      }
+    }
+  }
+}

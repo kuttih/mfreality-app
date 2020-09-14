@@ -1,0 +1,137 @@
+ <!-- Page Content -->
+ <div class="container tm-30">
+
+    <div class="row">
+      	<div class="col-lg-12 col-md-12">
+	     <div class="d-flex" style="margin: 10px 0px">
+		<div>
+	          <img src="../../../../../assets/img/scene/back-icon.png" class="">
+		</div>
+
+		<div>
+	           <a class="back" routerLink="/addscenes">  Back to Workbench </a>
+		</div>
+	     </div>
+	</div>
+	
+	<div class="col-lg-12 col-md-12" style="margin: 10px 10px">
+		<div class="row">
+		<div class=" col-md-4">
+		  <h1 class="subtitle">  My First Scene </h1>	
+		</div>
+
+		<div class="col-md-8 text-right">
+		   <div class="row" style="margin-top: 10px">
+			   <div class="col-md-2" style="height: 50px" > </div>
+
+			    <div class="col-md-2" style="height: 50px" > 
+			      <a class="white-btn"> 
+	 			 Cancel 
+			      </a>
+			    </div>
+
+			    <div class="col-md-2" style="height: 50px" > 
+			      <a class="white-btn"> 
+	 			 Clone 
+			      </a>
+			    </div>
+		    	
+			    <div class="col-md-2" style="height: 50px"> 
+			      <a class="white-btn"> Preview </a>
+			    </div>
+		    
+			    <div class="col-md-2" style="height: 50px"> 
+			      <a (click)="onNextClick()" routerLink="/confirmedimage" class="white-btn" style="color: #000" > Next </a>
+			    </div>
+			    
+	    		    <div class="col-md-2" style="height: 50px"> 
+			      <a href="addscene2.1.html" class="white-btn" style="color: #000"> Back </a>
+			    </div>
+		   </div>
+	      </div>
+	  </div>
+	  
+	</div>
+
+	 <div class="col-lg-2 col-md-2">
+	   <div class="left-box text-center">
+	  	   <div class="sel-box"> 
+			<div class="icon-img">
+			   <i class="fas fa-arrow-up" style="    transform: rotate(-45deg);font-size: 12px;"></i>
+			</div>
+			<a>Select </a>
+		   </div>
+		  <div class="sel-box"> 
+			<div class="icon-img">
+			   <i class="far fa-file" style="font-size: 20px;"></i>
+			</div>
+			<a> Delete  </a>
+		  </div>
+		  <div class="sel-box"> 
+			<div class="icon-img">
+			  <i class="far fa-square" style="font-size: 20px;"></i>
+			</div>
+			<a> Mask </a>
+		  </div>
+		  <div class="sel-box"> 
+			<div class="icon-img">
+			  <i class="fas fa-search-plus"></i>
+			</div>
+			<a> Zoom In </a>
+		   </div>
+		   <div class="sel-box"> 
+			<div class="icon-img">
+			  <i class="fas fa-search-minus"></i>
+			</div>
+			<a> Zoom Out </a>
+		   </div>
+	  </div>
+	</div>
+
+	 <div class="col-md-7 mr-20">
+	   <div class="success">
+		 <a> Uploaded Trigger image Successfully </a>
+		 
+	   </div>
+	   <div class="img">
+		   
+		   <!-- Last uploaded Image -->
+		 <!-- <img src="../../../../../assets/img/scene/Image20.png" style="object-fit: contain;  width: 100%;"/> -->
+		 <!-- Dynamic -->
+		 
+			<div *ngIf="retrievedImage; else spinnerBlock" >
+				<img [src]="retrievedImage" id="lastUploadedImage" style="object-fit: contain;  width: 100%;">
+			</div>
+			<!-- With Async and await not needed -->
+			<ng-template #spinnerBlock>
+				<div class="spinner-grow text-muted" style="background: #2b3474;position: relative;left: 320px;top: 90px;"></div>
+			</ng-template>
+		
+	   </div>
+	 </div>
+
+	<div class="col-md-3 mr-20 text-right" >
+		
+		<a class="btn btn-primary" style="width: 120px; padding: 10px; font-size: 16px" routerLink="/uploadimage"> Change </a>
+		<h2 style="margin-top:10px">Please upload .patt file</h2>
+		<mat-form-field class="columns">
+			
+			<mat-label *ngIf="selectedFiles; else newFile">{{selectedFiles.item(0).name}}</mat-label>
+			<ng-template #newFile>
+				<mat-label>Choose file</mat-label>
+			</ng-template>
+			<input matInput disabled>
+			<button mat-icon-button matSuffix (click)="fileInput.click()">
+				<mat-icon>attach_file</mat-icon>
+			</button>
+			<input hidden (change)="selectFile($event)" #fileInput type="file" id="file">
+		</mat-form-field>
+		
+	</div>
+
+    </div>
+
+  </div>
+
+
+ 

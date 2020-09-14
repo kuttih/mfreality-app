@@ -1,0 +1,392 @@
+<div class="spinner-status" *ngIf="uploader">
+	<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+<!-- Page Content -->
+<div class="container tm-30">
+
+    <div class="row">
+        <!-- Back -->
+        <div class="col-lg-12 col-md-12">
+            <div class="d-flex" style="margin: 10px 0px">
+                <div>
+                    <img src="../../../../../assets/img/scene/back-icon.png" class="">
+                </div>
+
+                <div>
+                    <a class="back" routerLink="/confirmedimage"> Back to Workbench </a>
+                </div>
+            </div>
+        </div>
+        <!-- Buttons -->
+        <div class="col-lg-12 col-md-12" style="margin: 10px 10px">
+            <div class="row">
+                <div class=" col-md-4">
+                    <h1 class="subtitle"> My First Scene </h1>
+                </div>
+
+                <div class="col-md-8 text-right">
+                    <div class="row" style="margin-top: 10px">
+                        <div class="col-md-2" style="height: 50px"> </div>
+
+                        <div class="col-md-2" style="height: 50px">
+                            <a class="white-btn">
+                                Cancel
+                            </a>
+                        </div>
+
+                        <div class="col-md-2" style="height: 50px">
+                            <a class="white-btn">
+                                Clone
+                            </a>
+                        </div>
+
+                        <div class="col-md-2" style="height: 50px">
+                            <a class="white-btn"> Preview </a>
+                        </div>
+
+                        <div class="col-md-2" style="height: 50px">
+                            <a routerLink="/sceneCompleted" (click)="confirmArCreation()" class="white-btn"
+                                style="color: #000"> Next </a>
+                        </div>
+
+                        <div class="col-md-2" style="height: 50px">
+                            <a routerLink="/confirmedimage" class="white-btn" style="color: #000"> Back </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Options -->
+        <div class="col-lg-2 col-md-2">
+            <div class="left-box text-center">
+                <div class="sel-box">
+                    <div class="icon-img">
+                        <img src="../../../../../assets/img/scene/top.png">
+                    </div>
+                    <a> Add Lock view </a>
+                </div>
+                <div class="sel-box">
+                    <div class="icon-img">
+                        <img src="../../../../../assets/img/scene/top.png">
+                    </div>
+                    <a> Preview </a>
+                </div>
+                <div class="sel-box">
+                    <div class="icon-img">
+                        <img src="../../../../../assets/img/scene/top.png">
+                    </div>
+                    <a> 3-d view </a>
+                </div>
+                <div class="sel-box">
+                    <div class="icon-img">
+                        <img src="../../../../../assets/img/scene/top.png">
+                    </div>
+                    <a> Undo changes </a>
+                </div>
+                <div class="sel-box">
+                    <div class="icon-img">
+                        <img src="../../../../../assets/img/scene/top.png">
+                    </div>
+                    <a> Reset </a>
+                </div>
+
+                <div class="d-flex">
+                    <div style="width: 40%">
+                        <div class="icon-img">
+                            <img src="../../../../../assets/img/scene/top.png">
+                        </div>
+                        <a> Reset </a>
+                    </div>
+
+                    <div style="width: 20%">
+                        <a> Text </a>
+                        <a> Text </a>
+                    </div>
+
+                    <div style="width: 40%">
+                        <div class="icon-img">
+                            <img src="../../../../../assets/img/scene/top.png">
+                        </div>
+                        <a> Reset </a>
+                    </div>
+
+                </div>
+                <br />
+            </div>
+        </div>
+        <!-- Center -->
+        <div class="col-md-7 mr-20">
+            <div class="success">
+                <a> Uploaded Trigger image Successfully </a>
+            </div>
+            <div class="img">
+                <!-- <img src="../../../../../assets/img/scene/Image20.png" style="object-fit: contain;width: 100%;" /> -->
+                <div *ngIf="retrievedImage">
+                    <img [src]="retrievedImage" id="lastUploadedImage" style="object-fit: contain;  width: 100%;">
+                </div>
+            </div>
+        </div>
+        <!-- Overlays space -->
+        <div class="col-md-3 mr-20 text-center">
+            <div class="overlay-box text-center">
+                <div class="w-plus"> + </div>
+                <a class="w-text" data-toggle="modal" data-target="#exampleModal"> Add Overlay </a>
+            </div>
+
+            <div class="overlay-box  mr-20 text-left">
+                <div class="w-title"> Overlay 1: Harcoded </div>
+                <div class="w-body">
+                    <div class="d-flex">
+                        <div style="width: 50%" class="w-loaded"> My overlay </div>
+                        <div style="width: 50%" class="text-right">
+                            <a class="w-btext"> Update </a> <a class="w-btext"> Changes </a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex" style="margin-top: 10px">
+                        <div style="width: 40%;">
+                            <!-- <img src="../../../../../assets/img/scene/Image20.png"
+                                style="object-fit: contain;     width: 100%; " /> -->
+
+                            <video src="../../../../../assets/staticVideo/nyan-cat.mp4" controls
+                                style="object-fit: contain;width: 100%; ">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div style="width: 10%; margin-left: 10px; margin-top: 10px">
+                            <a class="btn btn-default"> V </a>
+                        </div>
+
+                        <div style="width: 10%;  margin-left: 10px;  margin-top: 10px">
+                            <a class="btn btn-default"> V </a>
+                        </div>
+
+                        <div style="width: 10%; margin-left: 10px;  margin-top: 10px">
+                            <a class="btn btn-default"> V </a>
+                        </div>
+                    </div>
+
+                    <div class="row mr-20" style="margin-top: 20px; padding: 0px">
+                        <div class="col-md-6" style="margin: 0px; padding: 0">
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="customControlAutosizing"
+                                    checked="">
+                                <label class="custom-control-label" for="customControlAutosizing"> On Video </label>
+                            </div>
+
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="customControlAutosizing1">
+                                <label class="custom-control-label" for="customControlAutosizing1"> Fide In </label>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6 text-right">
+                            <a class="actions" href="addscene2.5.html"> Add Actions</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <h1> Overlays testing</h1>
+        <div *ngIf="overlays">
+            <div *ngFor="let overlay of overlays; let i = index">
+            {{i+1}}
+            <!-- Overlay Block -->
+            <div class="overlay-box  mr-20 text-left">
+                <div class="w-title">{{overlay.name}}</div>
+                <div class="w-body">
+                    <div class="d-flex">
+                        <div style="width: 50%" class="w-loaded"> My overlay </div>
+                        <div style="width: 50%" class="text-right">
+                            <a class="w-btext"> Update </a> <a class="w-btext"> Changes </a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex" style="margin-top: 10px">
+                        <div style="width: 40%;">
+                            <!-- <img src="../../../../../assets/img/scene/Image20.png"
+                                style="object-fit: contain;     width: 100%; " /> -->
+
+                            <video src="{{overlay.video_path}}" controls
+                                style="object-fit: contain;width: 100%; ">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div style="width: 10%; margin-left: 10px; margin-top: 10px">
+                            <a class="btn btn-default"> V </a>
+                        </div>
+
+                        <div style="width: 10%;  margin-left: 10px;  margin-top: 10px">
+                            <a class="btn btn-default"> V </a>
+                        </div>
+
+                        <div style="width: 10%; margin-left: 10px;  margin-top: 10px">
+                            <a class="btn btn-default"> V </a>
+                        </div>
+                    </div>
+
+                    <div class="row mr-20" style="margin-top: 20px; padding: 0px">
+                        <div class="col-md-6" style="margin: 0px; padding: 0">
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="customControlAutosizing"
+                                    checked="">
+                                <label class="custom-control-label" for="customControlAutosizing"> On Video </label>
+                            </div>
+
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="customControlAutosizing1">
+                                <label class="custom-control-label" for="customControlAutosizing1"> Fide In </label>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6 text-right">
+                            <a class="actions" href="addscene2.5.html"> Add Actions</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Video Upload Modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+
+                    <div class="col-md-12 mr-20">
+                        <h1 class="re-title"> Upload Overlay </h1>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-2" style="padding-top: 10px;">
+                                <label class="label"> Name </label>
+                            </div>
+                            <div class="col-md-10">
+                                <input class="input1 " [(ngModel)]="videoName">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-2" style="padding-top: 10px;">
+                                <label class="label"> Folder </label>
+                            </div>
+                            <div class="col-md-10">
+                                <h2 class="trigger"> Video </h2>
+                                <div class="add-new1">
+                                    <a> Add New </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-2" style="padding-top: 10px;">
+                                <label class="label"> Type </label>
+                            </div>
+                            <div class="col-md-10">
+                                <h2 class="trigger"> Video </h2>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mr-20" style=" margin-top: 30px">
+                        <div class="row">
+                            <div class="col-md-3 ml-50" style="margin-left: 0">
+                                <label class="label"> Overlay videos </label>
+                            </div>
+                            <div class="col-md-3 ml-50">
+                                <a class="btn btn-primary"> From File </a>
+                            </div>
+                            <div class="col-md-3 ml-50">
+                                <a class="btn btn-primary"> From DropBox </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12 mr-20">
+                        <div class="row">
+                            <div class="col-md-2">
+
+                            </div>
+                            <div class="col-md-8">
+                                <input class="img-input" placeholder="100mb Max">
+                            </div>
+                            <div class="col-md-2">
+                                <a class="btn btn-primary"> Browser </a>
+                                <input type="file" id="file" (change)="handleFileInput($event.target.files)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 ">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label class="label"> Description </label>
+
+                            </div>
+                            <div class="col-md-12">
+                                <Textarea class="text-area" [(ngModel)]="description" name="description"> </Textarea>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 ">
+                        <div class="custom-control custom-checkbox mr-sm-2">
+                            <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                            <label class="custom-control-label" for="customControlAutosizing">Loop overlay</label>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-12 col-lg-12 mr-20 text-right">
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close"
+                            style="width: 120px">
+                            CLOSE
+                        </button>
+                        <!-- <a href="addscene2.4.html"  class="btn btn-primary" style="width: 120px; margin-left: 10px">
+                
+             		 Upload
+                  </a> -->
+                        <input type="button" (click)="uploadFileToCoundinary()" value="upload">
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

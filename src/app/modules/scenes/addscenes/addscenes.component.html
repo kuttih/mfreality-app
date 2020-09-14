@@ -1,0 +1,276 @@
+<div class="spinner-status" *ngIf="uploader">
+<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+<!-- Page Content -->
+<div class="container tm-30">
+
+	<div class="row">
+		<div class="col-lg-12 col-md-12">
+			<div class="d-flex" style="margin: 10px 0px">
+				<div>
+					<img src="../../../../assets/img/scene/back-icon.png" class="">
+				</div>
+
+				<div>
+					<a class="back" routerLink="/lessons"> Back to Workbench </a>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-12 col-md-12" style="margin: 10px 10px">
+			<div class="row">
+				<div class="col-lg-6 col-md-6" style="margin-bottom: 10px">
+					<h1 class="subtitle"> My First Scene <svg class="svg-inline--fa fa-edit fa-w-18" style="font-size: 10px; color: #000; font-size: 10px;
+    color: #000;
+    position: absolute;
+    right: 67%;
+    top: 5px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="edit" role="img"
+							xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+							<path fill="currentColor"
+								d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z">
+							</path>
+						</svg>
+						<!-- <i class="fas fa-edit" style="font-size: 10px; color: #000; font-size: 10px;
+    color: #000;
+    position: absolute;
+    right: 67%;
+    top: 5px;"></i> -->
+					</h1>
+				</div>
+
+				<div class="col-lg-6 col-md-6">
+					<div class="row" style="width: 100%">
+						<div class="col-md-3" style="height: 50px">
+							<a class="white-btn"> Clone </a>
+						</div>
+
+
+						<div class="col-md-3" style="height: 50px">
+							<a class="white-btn"> Preview </a>
+						</div>
+
+						<div class="col-md-3" style="height: 50px">
+							<a class="white-btn"> Next </a>
+						</div>
+
+						<div class="col-md-3" style="height: 50px">
+							<a class="white-btn"> Back </a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="col-lg-3 col-md-3">
+			<!-- <div class="uploader-status">
+				<mat-spinner></mat-spinner>
+			</div> -->
+		</div>
+		<div class="col-lg-6 col-md-6">
+			<div class="row" style="margin: 20px; margin-top: 60px">
+				<div class="card select-box" style="width: 100%; border: none; ">
+					<div class="card-body text-center">
+						<div class="col-lg-12" style="margin-top: 40px">
+							<p class="color" style="font-size: 18px"> Click to select from existing </p>
+						</div>
+
+						<div class="col-lg-12">
+							<p class="color" style="font-size: 18px;  font-family:  montserrat;"> or </p>
+						</div>
+
+						<div class="col-lg-12">
+							<a class="color sel" data-toggle="modal" data-target="#exampleModal"> Click to select
+								Trigger Image </a>
+						</div>
+
+					</div>
+					<br><br>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+
+
+</div>
+
+<!-- Upload TriggerImage Form -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+	aria-hidden="true">
+
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="row">
+
+					<div class="col-md-12 mr-20">
+						<h1 class="re-title"> Upload Trigger Image </h1>
+					</div>
+
+					<form role="form" (submit)="onUpload()" style="width: 100%;">
+						<div class="col-md-12" class="form-group">
+							<div class="row">
+								<div class="col-md-2" style="padding-top: 10px;">
+									<label class="label"> Name
+									</label></div>
+								<div class="col-md-10">
+									<input class="input1 form-control" type="text" [(ngModel)]="imageName"
+										name="imageName">
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-12 mr-20" class="form-group">
+							<div class="row">
+								<div class="col-md-2" style="padding-top: 10px;">
+									<label class="label"> Folder
+									</label></div>
+								<div class="col-md-10">
+									<h2 class="trigger"> My Triggers </h2>
+									<div class="add-new1">
+										<a> Add New </a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-12" class="form-group">
+							<div class="row">
+								<div class="col-md-2">
+									<label class="label"> Coordinates
+									</label></div>
+								<div class="col-md-2">
+									<a class="map"> View Map </a>
+								</div>
+								<div class="col-md-8">
+									<input class="input1 form-control">
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-12 mr-20" class="form-group" style=" margin-top: 30px">
+							<div class="row">
+								<div class="col-md-3 ml-50" style="margin-left: 0px">
+									<label class="label"> Trigger Image
+									</label></div>
+								<div class="col-md-3 ml-50">
+									<a class="btn btn-primary form-group"> From File </a>
+								</div>
+								<div class="col-md-3 ml-50">
+									<a class="btn btn-primary form-group"> From DropBox </a>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="col-md-12 mr-20" class="form-group">
+							<div class="row">
+								<div class="col-md-2">
+
+								</div>
+								<div class="col-md-8">
+									<input class="img-input form-control" placeholder="Select image">
+								</div>
+								<div class="col-md-2">
+									<a class="btn btn-primary form-control"> Browser </a>
+								</div>
+
+
+							</div>
+						</div>
+						<div class="col-md-12 mr-20" class="form-group">
+							<div class="row">
+								<div class="col-md-2">
+									<input class="btn btn-primary" type="file" (change)="onFileChanged($event)" style="
+								margin-left: 103px;
+							">
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-12 mr-20" class="form-group">
+							<div class="row">
+								<div class="col-md-12">
+									<label class="label"> Description
+
+									</label></div>
+								<div class="col-md-12">
+									<textarea class="text-area form-control" [(ngModel)]="description"
+										name="description"> </textarea>
+								</div>
+
+							</div>
+						</div>
+
+
+
+
+						<div class="col-md-12 col-lg-12  text-right">
+
+							<button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close"
+								style="width: 120px">
+								CLOSE
+							</button>
+							<a (click)="onUpload()" class="btn btn-primary" style="width: 120px; margin-left: 10px">
+								Upload
+							</a>
+
+						</div>
+					</form>
+
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+</div>
+<!-- End Upload TriggerImage Form -->
+
+
+
+<!-- <div class="container row">
+	<div class="col-md-12">
+		<h1>Upload Image</h1>
+	</div>
+</div>
+<div class="container row">
+	<div class="col-md-6">
+		<input type="file" (change)="onFileChanged($event)">
+	</div>
+	<div class="col-md-6">
+		<input type="button" (click)="onUpload()" value="upload">
+	</div>
+
+</div>
+<hr />
+<div class="container row">
+	<div class="col-md-12">
+		<div *ngIf=message>{{message}}</div>
+	</div>
+</div>
+<div class="container row">
+	<div class="col-md-6">
+		<input type="text" class="form-control" id="name" placeholder="image name" [(ngModel)]="imageName"
+			name="name" />
+	</div>
+	<div class="col-md-6">
+		<input type="button" (click)="getImage()" value="Get Image">
+	</div>
+</div>
+<div class="container row">
+	<div class="col-md-12">
+		<div *ngIf=retrievedImage>
+			<img [src]="retrievedImage" id="uploadedImage">
+		</div>
+	</div>
+</div> -->

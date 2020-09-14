@@ -1,0 +1,133 @@
+<div class="spinner-status" *ngIf="uploader">
+	<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
+<!-- Page Content -->
+<div class="container tm-30">
+
+	<div class="row">
+		<div class="col-lg-12 col-md-12">
+			<div class="d-flex" style="margin: 10px 0px">
+				<div>
+					<img src="../../../../../assets/img/scene/back-icon.png" class="">
+				</div>
+
+				<div>
+					<a class="back" routerLink="/overlays"> Back to Workbench </a>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-12 col-md-12" style="margin: 10px 10px">
+			<div class="row">
+				<div class=" col-md-4">
+					<h1 class="subtitle"> My First Scene </h1>
+				</div>
+
+				<div class="col-md-8 text-right">
+					<div class="row" style="margin-top: 10px">
+						<div class="col-md-2" style="height: 50px"> </div>
+
+						<div class="col-md-2" style="height: 50px">
+							<a routerLink="/addscene" class="white-btn" style="color: #000">
+								Cancel
+							</a>
+						</div>
+
+						<div class="col-md-2" style="height: 50px">
+							<a class="white-btn">
+								Clone
+							</a>
+						</div>
+
+						<div class="col-md-2" style="height: 50px">
+							<a class="white-btn"> Preview </a>
+						</div>
+
+						<div class="col-md-2" style="height: 50px">
+							<!-- <a routerLink="/addscene" class="white-btn" style="color: #000"> Done </a> -->
+
+							<a class="white-btn" style="color: #000" (click)="saveScene()"> Done </a>
+
+						</div>
+
+						<div class="col-md-2" style="height: 50px">
+							<a routerLink="/overlays" class="white-btn" style="color: #000"> Back </a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-md-5">
+			<div class="">
+				<div>
+					<label class="b-title"> My First Scene </label>
+				</div>
+				<div>
+					<input type="text" class="scene-input" placeholder="Scene name" [(ngModel)]="sceneName">
+				</div>
+			</div>
+			<div class="m-scene">
+				<div>
+					<label class="b-title"> HashTags </label>
+				</div>
+				<div class="label">
+					<input type="text" class="scene-input" placeholder="Tags name" [(ngModel)]="tags">
+				</div>
+			</div>
+
+			<div class="m-scene">
+				<div>
+					<label class="b-title"> Display Image </label>
+				</div>
+				<div class="box-con">
+					<div class="row" style="padding: 10px">
+
+						<div class="col-md-5">
+							<!-- <img src="../../../../../assets/img/scene/Image20.png" class="img " style="height: 120px;"/> -->
+							<div *ngIf="retrievedImage">
+								<img [src]="retrievedImage" id="lastUploadedImage"
+									style="object-fit: contain;  width: 100%;">
+							</div>
+
+						</div>
+
+						<div class="col-md-7" style="margin-top: 30px;">
+							<p class="text"> Your Scene contains below listed overlays </p>
+							<div style="width: 40%;">
+								<!-- <img src="../../../../../assets/img/scene/Image20.png"
+									style="object-fit: contain;     width: 100%; " /> -->
+								<div *ngIf="overlays">
+									<div *ngFor="let overlay of overlays; let i = index">
+										<video src="{{overlay.video_path}}" controls
+											style="object-fit: contain;width: 100%; ">
+											Your browser does not support the video tag.
+										</video>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="col-md-6 mr-20">
+			<h2 class="b-title"> Overlays: Your Scene contains below listed overlays </h2>
+			<p class="c-title">Dynamic Overlays</p>
+			<div *ngIf="overlays">
+				<div *ngFor="let overlay of overlays; let i = index">
+					<video src="{{overlay.video_path}}" controls style="object-fit: contain;width: 51%; ">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+			</div>
+
+
+		</div>
+
+	</div>
+
+</div>

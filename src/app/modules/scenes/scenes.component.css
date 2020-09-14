@@ -1,0 +1,25 @@
+.example-card {
+  max-width: 350px;
+  background-color: #1d1d1d0d;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.scene-card{
+    max-width: 300px;
+    background-color: #1d1d1d0d;
+  
+}
+
+.scene-header-triggerimage {
+    background-image: url('https://res.cloudinary.com/mfworkshop/image/upload/v1594849690/mfworkshop/l6tdv1lv2pelbpmtoql3.png');
+    background-size: cover;
+  }
+
+  .list{
+    padding: 10px;
+  }
+
