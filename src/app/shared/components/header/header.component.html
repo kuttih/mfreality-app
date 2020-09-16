@@ -40,7 +40,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
 
   <div class="container">
-    <a class="navbar-brand" href="#">MFR</a>
+    <a class="navbar-brand" href="/">MFR</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
       aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -53,16 +53,22 @@
         <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
           <a class="nav-link" [routerLink]="['/about']">About</a>
         </li>
+        <li *ngIf="!isLoggedIn" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link" hr="#"  data-target="#signInModal">Scene</a>
+        </li>
+        <li *ngIf="isLoggedIn" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link" [routerLink]="['/lessons']">Scene</a>
+        </li>
         <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
           <a class="nav-link" [routerLink]="['/services']" >Services</a>
         </li>
         <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
           <a class="nav-link" [routerLink]="['/contact']">Contact</a>
         </li>
-        <li class="nav-item signIn">
+        <li class="nav-item signIn"  *ngIf="!isLoggedIn">
           <a class="nav-link" href="#" data-toggle="modal" data-target="#signInModal">Sign In</a>
         </li>
-        <li class="nav-item signup">
+        <li class="nav-item signup"  *ngIf="!isLoggedIn">
           <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal1">Sign up</a>
         </li>
       </ul>
