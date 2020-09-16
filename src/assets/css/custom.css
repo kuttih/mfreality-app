@@ -913,3 +913,12 @@ font-family: "Montserrat";
 	padding-right: 40%;
   }
 }
+
+.register .register-btn{
+	background-color:#2b3474;
+	padding: 10px 0;
+}
+.register input{
+	padding: 21px 13px;
+    font-size: 14px;
+}
