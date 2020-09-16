@@ -20,7 +20,7 @@ body {
 .top-400{
 	font-size: 12px;
 	color: #7e7e7e;
-	font-family: "Montserrat";
+	/*font-family: "Montserrat";*/
         padding: 4px
 	
 }
@@ -125,7 +125,7 @@ body {
 .title{
        font-size: 13px;
        color: #7e7e7e;
-       font-family: "Montserrat";
+       /*font-family: "Montserrat";*/
        font-weight: 800;
 }
 
@@ -248,7 +248,7 @@ p{
   font-size: 14px;
   font-size: 12px;
   color: #74726d; 
-  font-family: "Montserrat";
+  /*font-family: "Montserrat";*/
   font-weight: 400;
 }
 
@@ -271,7 +271,7 @@ p{
 .reg-title{
     font-size: 16px;
     color: #74726d !important;
-    font-family: "Montserrat";
+    /*font-family: "Montserrat";*/
     font-weight: 700;
 }
 
@@ -328,7 +328,7 @@ p{
     border: none;
     width: 94%;
     padding: 12px;
-font-family: "Montserrat";
+/*font-family: "Montserrat";*/
     box-shadow: 0px 3px 3px 0px #dadada52;
 }
 
@@ -337,7 +337,7 @@ font-family: "Montserrat";
     border: none;
     width: 100%;
     padding: 12px;
-   font-family: "Montserrat";
+   /*font-family: "Montserrat";*/
     box-shadow: 0px 3px 3px 0px #dadada52;
 }
 
@@ -364,7 +364,7 @@ font-family: "Montserrat";
 .work-title{
 	font-size: 30px;
 	color: #261874;
-	font-family: "Montserrat";
+	/*font-family: "Montserrat";*/
 	font-weight: 700;
 
 }
@@ -373,7 +373,7 @@ font-family: "Montserrat";
 .subtitle{
 	font-size: 24px;
 	color: #261874;
-	font-family: "Montserrat";
+	/*font-family: "Montserrat";*/
 	font-weight: 700;
 }
 
@@ -381,7 +381,7 @@ font-family: "Montserrat";
 .scene-text{
 	font-size: 18px;
         color: #261874;
-	font-family: "Montserrat";
+	/*font-family: "Montserrat";*/
 	font-weight: 400;
 	margin: 20px 0px;
 }
@@ -394,7 +394,7 @@ font-family: "Montserrat";
 }
 .plus{
  color: #261874;
- font-family: "Montserrat";
+ /*font-family: "Montserrat";*/
  font-size: 110px;
  font-weight: bold;
 }
@@ -417,7 +417,7 @@ font-family: "Montserrat";
 .add-new{
 font-size: 18px;
 color: #261874 !important;
-font-family: "Montserrat";
+/*font-family: "Montserrat";*/
 font-weight: 700  !important;
 margin-top: -10px;
 cursor: pointer;
@@ -427,7 +427,7 @@ cursor: pointer;
 .back{
 	font-size: 14px;
 	color: #393939;
-	font-family: "Montserrat";
+	/*font-family: "Montserrat";*/
 	font-weight: 400;
 	margin-left: 15px;
 }
@@ -451,12 +451,12 @@ cursor: pointer;
 
 .select-box{
   background: #f4f0f0;
-  font-family: "Montserrat";
+  /*font-family: "Montserrat";*/
 }
 
 .sel{
   font-size: 18px;
-  font-family: "Montserrat";
+  /*font-family: "Montserrat";*/
   font-weight: 400;
   color: #007bff !important;
 }
@@ -464,7 +464,7 @@ cursor: pointer;
 .re-title{
     font-size: 24px;
     color: #74726d !important;
-    font-family: "Montserrat";
+    /*font-family: "Montserrat";*/
     font-weight: bolder;
     text-align: center;
 
@@ -473,7 +473,7 @@ cursor: pointer;
 .label{
      font-size: 14px;
      color: #606060;
-     font-family: "Montserrat";
+     /*font-family: "Montserrat";*/
      font-weight: 400;
 }
 
@@ -481,7 +481,7 @@ cursor: pointer;
 .trigger{
     font-size: 15px;
     color: #74726d !important;
-    font-family: "Montserrat";
+    /*font-family: "Montserrat";*/
     font-weight: bolder;
     padding-top: 12px;
 }
@@ -489,7 +489,7 @@ cursor: pointer;
 .add-new1{
   color: #007bff !important;
   font-size: 13px;
-  font-family: "Montserrat";
+  /*font-family: "Montserrat";*/
   position: absolute;
   top: 22px;
   right: 18px;
@@ -507,7 +507,7 @@ cursor: pointer;
  border: none;
  color: #fff !important;
  font-size: 12px;
- font-family: "Montserrat";
+ /*font-family: "Montserrat";*/
  border-radius: 0px !important;
 }
 
@@ -521,7 +521,7 @@ cursor: pointer;
  border: none;
  color: #fff !important;
  font-size: 12px;
- font-family: "Montserrat";
+ /*font-family: "Montserrat";*/
  border-radius: 0px !important;
  background: #606060;
 }
@@ -531,7 +531,7 @@ cursor: pointer;
  color: #fff;
  background: #2b3474;
  width: 100%;
- font-family: "Montserrat";
+ /*font-family: "Montserrat";*/
 }
 
 .sel-box{
@@ -546,7 +546,7 @@ cursor: pointer;
 
 .success{
   background: #2b3474;
-  font-family: "Montserrat";
+  /*font-family: "Montserrat";*/
   color: #fff;
   padding: 7px 7px; 
 }
@@ -567,7 +567,7 @@ cursor: pointer;
 
 .w-plus{
    color: #fff;
-   font-family: "Montserrat";
+   /*font-family: "Montserrat";*/
    font-size: 60px;
    font-weight: bold;
    padding-top: 40px;
@@ -575,7 +575,7 @@ cursor: pointer;
 
 .w-text{
    color: #fff !important;
-   font-family: "Montserrat";
+   /*font-family: "Montserrat";*/
    font-size: 20px;
    font-weight: bold;
    padding-top: 0px;
@@ -584,7 +584,7 @@ cursor: pointer;
 
 .w-title{
    color: #fff !important;
-   font-family: "Montserrat";
+   /*font-family: "Montserrat";*/
    font-size: 16px;
    font-weight: 400;
    padding: 5px 10px;
@@ -599,19 +599,19 @@ cursor: pointer;
 
 .w-loaded{
   font-size: 14px;
-  font-family: "Montserrat";
+  /*font-family: "Montserrat";*/
   color: #606060
 }
 
 .w-btext{
   font-size: 14px;
-  font-family: "Montserrat";
+  /*font-family: "Montserrat";*/
   color: blue !important;
 }
 
 .checkbox{
   font-size: 14px;
-  font-family: "Montserrat";
+  /*font-family: "Montserrat";*/
   color: 606060 !important;
   margin-top: 5px;
 }
@@ -620,7 +620,7 @@ cursor: pointer;
   color: blue !important;
   text-decoration: underline !important;
   font-size: 14px;
-  font-family: "Montserrat";
+  /*font-family: "Montserrat";*/
   color: 606060 !important;
 }
 
@@ -633,13 +633,13 @@ cursor: pointer;
   color: #2b3474;
   font-size: 18px;
   font-weight: 900;
- font-family: "Montserrat";
+ /*font-family: "Montserrat";*/
 }
 .c-title{
   color: #2b3474;
   font-size: 18px;
   font-weight: 400;
- font-family: "Montserrat";
+ /*font-family: "Montserrat";*/
 }
 
 .scene-input{
@@ -647,7 +647,7 @@ cursor: pointer;
     padding: 10px;
     color: #2b3474;
     border: 2px solid #7e7e7e;
-   font-family: "Montserrat";
+   /*font-family: "Montserrat";*/
 }
 
 .box-con{
@@ -686,7 +686,7 @@ cursor: pointer;
     font-size: 22px;
     color: #2b3474 !important;
     font-weight: bolder;
-font-family: "Montserrat";
+/*font-family: "Montserrat";*/
 }
 
 .text1{

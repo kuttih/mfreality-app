@@ -54,7 +54,7 @@
           <a class="nav-link" [routerLink]="['/about']">About</a>
         </li>
         <li *ngIf="!isLoggedIn" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-          <a class="nav-link" hr="#"  data-target="#signInModal">Scene</a>
+          <a class="nav-link" href="#" data-toggle="modal"   data-target="#signInModal">Scene</a>
         </li>
         <li *ngIf="isLoggedIn" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
           <a class="nav-link" [routerLink]="['/lessons']">Scene</a>
