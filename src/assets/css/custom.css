@@ -462,11 +462,11 @@ cursor: pointer;
 }
 
 .re-title{
-    font-size: 24px;
+    font-size: 22px;
     color: #74726d !important;
     /*font-family: "Montserrat";*/
     font-weight: bolder;
-    text-align: center;
+    /* text-align: center; */
 
 }
 
