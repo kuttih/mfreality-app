@@ -5,6 +5,7 @@ import { HomeComponent } from './modules/home/home.component';
 import { DefaultComponent } from './layouts/default/default.component';
 import { AboutComponent } from './modules/about/about.component';
 import { PrivacyComponent } from './modules/privacy/privacy.component';
+import { TermsComponent } from './modules/terms/terms.component';
 import { FAQComponent } from './modules/faq/faq.component';
 import { ServicesComponent } from './modules/services/services.component';
 import { ContactComponent } from './modules/contact/contact.component';
@@ -30,8 +31,8 @@ const routes: Routes = [
     path:'',component:HomeComponent},
     {path:'about',component:AboutComponent},
     {path:'privacy',component:PrivacyComponent},
-    {path:'faq',component:FAQComponent},
     {path:'terms',component:TermsComponent},
+    {path:'faq',component:FAQComponent},
     {path:'services',component:ServicesComponent},
     {path:'contact',component:ContactComponent}
     
